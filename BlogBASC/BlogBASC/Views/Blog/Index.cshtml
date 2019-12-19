@@ -1,0 +1,80 @@
+﻿@model IEnumerable<BlogBASC.Models.Blog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h2>Blog Listesi</h2>
+
+<p>
+    @Html.ActionLink("Yeni Post Oluştur", "Create", null, new { @class = "btn btn-primary btnclr" })
+</p>
+<table class="table table-bordered table-hover table-striped wcolor">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.KategoriAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Baslik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </th>
+        <
+        <th>
+            @Html.DisplayNameFor(model => model.EklenmeTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Onay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Anasayfa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.KategoriAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Baslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aciklama)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.EklenmeTarihi)
+        </td>
+        <td>
+            @if (item.Onay)
+            {
+                <label style="font-size:14px" class="badge badge-success">Onaylı</label>
+            }
+            else
+            {
+                <label style="font-size:14px" class="badge badge badge-danger">Onay Bekliyor</label>
+            }
+        </td>
+        <td>
+            @if (item.Anasayfa)
+            {
+                <label style="font-size:14px" class="badge badge-success">Anasayfada</label>
+            }
+            else
+            {
+                <label style="font-size:14px" class="badge badge-danger">Anasayfada Bulunmuyor</label>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }, new { @class = "btn btn-secondary btn-xs" }) 
+            @Html.ActionLink("Details", "Details", new { id=item.Id }, new { @class = "btn btn-info btn-xs" }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new { @class = "btn btn-danger btn-xs" })
+        </td>
+    </tr>
+}
+
+</table>

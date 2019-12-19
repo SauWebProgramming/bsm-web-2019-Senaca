@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BlogBASC.Models.CategoryModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h2>Kategoriler</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kategori Oluştur", "Create",null,new { @class="btn btn-primary" })
+</p>
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th style="width:37%">
+            @Html.DisplayNameFor(model => model.KategoriAdi)
+        </th>
+        <th style="width:12%">
+            @Html.DisplayNameFor(model => model.BlogSayisi)
+        </th>
+        <th style="width:200px"> </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.KategoriAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BlogSayisi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-secondary btn-xs" })
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-xs" })
+        </td>
+    </tr>
+}
+
+</table>

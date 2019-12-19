@@ -1,0 +1,143 @@
+﻿@model IEnumerable<BlogBASC.Models.BlogModel>
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="page-header page-hero" style="background-image:url(/Content/images/5.jpg)">
+
+    <div class="row page-header__content">
+        <article class="col-full">
+
+
+
+            <h1 class="page-header__title">
+
+                CATEGORIES
+
+            </h1>
+            <br />
+            <div class="row">
+                <div class="col-lg-4 cat">
+                    <ul>
+                        <li>  <a href="#0" class="btn btn--stroke page-header__btn">Photography</a></li>
+                        <li>  <a href="#0" class="btn btn--stroke page-header__btn">Healthy-Living</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 cat">
+                    <ul>
+
+                        <li>  <a href="#0" class="btn btn--stroke page-header__btn">Travel</a></li>
+                        <li>  <a href="#0" class="btn btn--stroke page-header__btn">Cinema</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 cat">
+                    <ul>
+                        <li>  <a href="#0" class="btn btn--stroke page-header__btn">Books</a></li>
+                        <li>  <a href="#0" class="btn btn--stroke page-header__btn">Science</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </article>
+    </div>
+
+</section> <!-- end page-header -->
+<!-- blog
+================================================== -->
+<section class="blog-content-wrap">
+
+    <div class="row blog-content">
+        <div class="col-full">
+
+            <div class="blog-list block-1-2 block-tab-full">
+
+                @foreach(var blog in Model)
+                {
+                <article class="col-block">
+
+                    <div class="blog-date">
+                        <a href="blog-single.html">@blog.EklenmeTarihi</a>
+                    </div>
+
+                    <h2 class="h01"><a href="blog-single.html">@blog.Baslik</a></h2>
+                    <p>
+                        @blog.Icerik
+                    </p>
+                    <p class="lead">
+                        @blog.Aciklama
+                    </p>
+
+                    <div class="blog-cat">
+                        <a href="blog.html">Photogarphy</a>
+                    </div>
+                    <a href="efes.html" class="buton btn-outline">Read More</a>
+                </article>
+                }
+
+
+            </div> <!-- end blog-list -->
+
+        </div> <!-- end col-full -->
+    </div> <!-- end blog-content -->
+
+    <div class="row blog-entries-nav">
+        <div class="col-full">
+            <a href="#0" class="btn btn--stroke">
+                <i class="im im-arrow-left"></i>
+                Prev
+            </a>
+            <a href="#0" class="btn btn--stroke">
+                Next
+                <i class="im im-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+</section> <!-- end blog-content-wrap -->
+<!-- footer
+================================================== -->
+<footer>
+    <div class="row">
+        <div class="col-full">
+
+            <div class="footer-logo">
+                <a class="footer-site-logo" href="#0"><img src="images/logo.png" alt="Homepage"></a>
+            </div>
+
+            <ul class="footer-social">
+                <li>
+                    <a href="#0">
+                        <i class="im im-facebook" aria-hidden="true"></i>
+                        <span>Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#0">
+                        <i class="im im-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#0">
+                        <i class="im im-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#0">
+                        <i class="im im-behance" aria-hidden="true"></i>
+                        <span>Behance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#0">
+                        <i class="im im-pinterest" aria-hidden="true"></i>
+                        <span>Pinterest</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+

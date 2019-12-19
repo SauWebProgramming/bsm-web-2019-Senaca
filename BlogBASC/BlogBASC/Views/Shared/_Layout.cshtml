@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASC Blog</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="~/Content/css/base.css">
+    <link rel="stylesheet" href="~/Content/css/vendor.css">
+    <link rel="stylesheet" href="~/Content/css/main.css">
+
+
+
+
+    <!-- fonts
+    ================================================== -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="top">
+    
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li class="current"><a class="smoothscroll" href="/Home/Index" title="home">Home</a></li>
+                <li><a class="smoothscroll" href="#" title="works">Works</a></li>
+                <li><a class="smoothscroll" href="/Home/Blog" title="blog">Blog</a></li>
+                <li><a class="smoothscroll" href="/Home/Contact" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    @RenderBody()
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/custom")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+   
+}
+else
+{
+    <a id="registerLink" href="/Account/Login" class="smoothscroll btn btn--stroke">
+        SIGN IN
+    </a>
+    <a id="loginLink" href="/Account/Register" class="smoothscroll btn btn--stroke">
+        REGISTER
+    </a>
+   
+
+}
