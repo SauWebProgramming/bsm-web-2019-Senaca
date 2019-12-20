@@ -24,7 +24,6 @@ namespace BlogBASC.Controllers
                                     Baslik = i.Baslik,
                                     Aciklama = i.Aciklama,
                                     Resim = i.Resim,
-                                    Icerik = i.Icerik.Length > 210 ? i.Baslik.Substring(0, 210) + "..." : i.Icerik,
                                     EklenmeTarihi = i.EklenmeTarihi,
                                     Onay = i.Onay,
                                     Anasayfa = i.Anasayfa
@@ -36,16 +35,10 @@ namespace BlogBASC.Controllers
             return View(blogs.ToList());
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
+       
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
 
             return View();
         }
