@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -18,6 +19,7 @@ namespace BlogBASC.Models
 
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        
     }
 
    

@@ -64,12 +64,12 @@
                     <p>
                         @blog.Aciklama
                     </p>
-                    
+
 
                     <div class="blog-cat">
                         <a href="blog.html">Photogarphy</a>
                     </div>
-                    <a href="efes.html" class="buton btn-outline">Read More</a>
+                    @Html.ActionLink("Read More...", "Details", "Blog", new { id = @blog.Id }, new { @class = "btn btn-primary" })
                 </article>
                 }
 

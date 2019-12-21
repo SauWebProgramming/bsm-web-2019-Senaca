@@ -56,7 +56,7 @@ namespace BlogBASC.Controllers
         // daha fazla bilgi için https://go.microsoft.com/fwlink/?LinkId=317598 sayfasına bakın.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,KategoriAdi")] Category category)
+        public ActionResult Create([Bind(Include = "KategoriAdi")] Category category)
         {
             if (ModelState.IsValid)
             {

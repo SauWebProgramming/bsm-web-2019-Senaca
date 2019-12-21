@@ -200,6 +200,7 @@
     <Content Include="Content\css\iconic\css\iconmonstr-iconic-font.min.css" />
     <Content Include="Content\css\main.css" />
     <Content Include="Content\css\vendor.css" />
+    <Content Include="Content\images\blog\1.JPG" />
     <Content Include="Content\images\3.jpg" />
     <Content Include="Content\images\5.jpg" />
     <Content Include="Content\images\an20 - Kopya.JPG" />
@@ -214,8 +215,11 @@
     <Content Include="Content\images\blog\blog-bg-02.jpg" />
     <Content Include="Content\images\contact-bg.jpg" />
     <Content Include="Content\images\count-bg.jpg" />
+    <Content Include="Content\images\DSC_0076.jpg" />
     <Content Include="Content\images\DSC_0505.jpg" />
+    <Content Include="Content\images\DSC_0561-2.jpg" />
     <Content Include="Content\images\DSC_0759.JPG" />
+    <Content Include="Content\images\DSC_1904.JPG" />
     <Content Include="Content\images\hero-bg.jpg" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\photoswipe\default-skin.png" />

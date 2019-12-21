@@ -508,7 +508,7 @@ form,
  * ------------------------------------------------------------------- */
 
 .pace {
-    -webkit-pointer-events: none;
+   
     pointer-events: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -636,9 +636,6 @@ textarea, select {
 .ss-custom-select select {
     -webkit-appearance: none;
     -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
     text-indent: 0.01px;
     text-overflow: '';
     margin: 0;
@@ -758,10 +755,6 @@ label > input[type="checkbox"], label > input[type="radio"] {
  * ## Change Autocomplete styles in Chrome - (_forms.scss)
  * ------------------------------------------------------------------- */
 
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
-    -webkit-text-fill-color: #cf3e3e;
-    transition: background-color 5000s ease-in-out 0s;
-}
 
 
 
@@ -1753,7 +1746,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
     background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
+   
 }
 
 .s-home .overlay {
@@ -2418,7 +2411,7 @@ html.no-csstransitions .home-content__main {
     background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
     background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
+  
 }
 
 .item-folio__thumb a {
@@ -3511,7 +3504,9 @@ article.blog-single .blog-content {
 .page-header {
     background-color: #0D0A0B;
     background-repeat: no-repeat;
-    background-position: center, center;
+    background-position: center;
+    height:100%;
+    background-size:cover;
     padding-top: 12.3rem;
     padding-bottom: 7.5rem;
     position: relative;
@@ -3552,8 +3547,7 @@ article.blog-single .blog-content {
     /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
-    /* IE6-9 */
+   
 }
 
 .page-header__content {
@@ -3665,9 +3659,7 @@ article.blog-single .blog-content {
     margin-right: 2rem;
 }
 
-.page-header__meta li::last-child {
-    margin-right: 0;
-}
+
 
 .page-header__meta span, .page-header__meta a {
     color: #FFFFFF;
@@ -4001,7 +3993,7 @@ article.blog-single .blog-content {
 @media only screen and (max-width: 500px) {
     .blog-entries-nav .btn {
         margin-right: 0;
-        min-width: none;
+        
         width: 100%;
     }
 }

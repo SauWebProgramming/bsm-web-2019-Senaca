@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout1.cshtml";
 }
 
-<h2>Post Oluştur</h2>
+<h2>Create BlogPost</h2>
 
 
 @using (Html.BeginForm())
@@ -51,21 +51,11 @@
     <div class="form-group">
         @Html.LabelFor(model => model.CategoryId, "CategoryId", new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownList("CategoryId", null, "Kategori Seçiniz", new { @class = "form-control" })
+            @Html.DropDownList("CategoryId", null, "Select Category", new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
         </div>
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Anasayfa, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            <div class="checkbox">
-                @Html.EditorFor(model => model.Anasayfa)
-                @Html.ValidationMessageFor(model => model.Anasayfa, "", new { @class = "text-danger" })
-            </div>
-        </div>
-    </div>
-    
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
@@ -78,7 +68,7 @@
 
 <hr />
 <div>
-    @Html.ActionLink("Listeye Dön", "Index", null, new { @class = "btn btn-primary btnclr" })
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary btnclr" })
 </div>
 
 

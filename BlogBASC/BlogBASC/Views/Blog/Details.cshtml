@@ -2,82 +2,57 @@
 
 @{
     ViewBag.Title = "Details";
-    Layout = "~/Views/Shared/_Layout1.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Blog</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.KategoriAdi)
-        </dt>
+<article class="blog-single">
 
-        <dd>
-            @Html.DisplayFor(model => model.Category.KategoriAdi)
-        </dd>
+    <!-- page header/blog hero
+    ================================================== -->
+    <div class="page-header page-header--single page-hero" style="background-image:url(../../Content/images/blog/@Model.Resim)">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Baslik)
-        </dt>
+        <div class="row page-header__content narrow">
+            <article class="col-full">
+                <div class="page-header__info">
+                    <div class="page-header__cat">
+                       @Model.Category
+                    </div>
+                </div>
+                <h1 class="page-header__title">
 
-        <dd>
-            @Html.DisplayFor(model => model.Baslik)
-        </dd>
+                    @Model.Baslik
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Aciklama)
-        </dt>
+                </h1>
+                <ul class="page-header__meta">
+                    <li class="date"><span class="glyphicon glyphicon-time"></span> @Model.EklenmeTarihi</li>
+                    <li class="author">
+                        By
+                        <span>Sena Çağlar</span>
+                    </li>
+                </ul>
 
-        <dd>
-            @Html.DisplayFor(model => model.Aciklama)
-        </dd>
+            </article>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Resim)
-        </dt>
+    </div> <!-- end page-header -->
 
-        <dd>
-            @Html.DisplayFor(model => model.Resim)
-        </dd>
+    <div class="row blog-content">
+        <div class="col-full blog-content__main">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Icerik)
-        </dt>
+            <blockquote>
+                <p>@Model.Aciklama</p>
+            </blockquote>
 
-        <dd>
-            @Html.DisplayFor(model => model.Icerik)
-        </dd>
+            <p>
+                @Model.Icerik
+            </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.EklenmeTarihi)
-        </dt>
+            
+            </div>
+        </div>
+        </article>
 
-        <dd>
-            @Html.DisplayFor(model => model.EklenmeTarihi)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Onay)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Onay)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Anasayfa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Anasayfa)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+              
