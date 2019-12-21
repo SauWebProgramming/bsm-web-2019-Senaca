@@ -1,0 +1,28 @@
+﻿@model IEnumerable<BlogBASC.Models.Category>
+
+<section class="page-header page-hero" style="background-image:url(/Content/images/5.jpg)">
+
+    <div class="row page-header__content">
+        <article class="col-full">
+
+
+
+            <h1 class="page-header__title">
+
+                CATEGORIES
+
+            </h1>
+            <br />
+            <div class="row-cols-lg-2 ">
+                @foreach (var item in Model)
+                {  <div class="col-lg-4 cat">
+                    <ul>
+                        <li> <a href="/Blog/List/@item.Id" class="btn btn--stroke page-header__btn">@item.KategoriAdi</a></li>
+                    </ul>
+                </div>
+                }
+
+            </div>
+        </article>
+    </div>
+    </section>

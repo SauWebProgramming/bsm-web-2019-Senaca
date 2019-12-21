@@ -1,0 +1,56 @@
+﻿@model IEnumerable<BlogBASC.Models.BlogModel>
+@{
+    /**/
+
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{Html.RenderAction("CategoryMenu", "Category");}
+
+<!-- blog================================ -->
+@if (Model.Count() == 0)
+{
+    <br/>
+    <div class="alert alert-warning" role="alert"style="color:snow;">
+        <strong>Kayıt Bulunamadı.</strong>
+    </div>
+}
+else
+{
+    <section class="blog-content-wrap">
+
+        <div class="row blog-content">
+            <div class="col-full">
+
+                <div class="blog-list block-1-2 block-tab-full">
+
+                    @foreach (var blog in Model)
+                    {
+                        <article class="col-block">
+
+                            <div class="blog-date">
+                                <a href="blog-single.html">@blog.EklenmeTarihi</a>
+                            </div>
+
+                            <h2 class="h01"><a href="blog-single.html">@blog.Baslik</a></h2>
+                            <p>
+                                @blog.Aciklama
+                            </p>
+
+
+                            <div class="blog-cat">
+                                <a href="blog.html">Photogarphy</a>
+                            </div>
+                            @Html.ActionLink("Read More...", "Details", "Blog", new { id = @blog.Id }, new { @class = "btn btn-primary" })
+                        </article>
+                    }
+
+
+                </div> <!-- end blog-list -->
+
+            </div> <!-- end col-full -->
+        </div> <!-- end blog-content -->
+    </section>
+}

@@ -14,6 +14,13 @@ namespace BlogBASC.Controllers
     {
         private BlogContext db = new BlogContext();
 
+
+
+        public PartialViewResult CategoryMenu()
+        {
+            return PartialView(db.Kategoriler.ToList());
+        }
+
         // GET: Category
         public ActionResult Index()
         {
