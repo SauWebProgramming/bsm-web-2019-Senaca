@@ -14,6 +14,7 @@ namespace BlogBASC.Controllers
         {
             return View();
         }
+        [Authorize]
         public ActionResult Blog()
         {
             var blogs = Context.Bloglar

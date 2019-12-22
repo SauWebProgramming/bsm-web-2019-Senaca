@@ -1459,6 +1459,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     background-color: transparent;
     position: absolute;
     top: 0;
+    padding-bottom:15px;
     z-index: 500;
 }
 
@@ -1504,7 +1505,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 
 .header-logo {
-    display: inline-block;
+    display: none;
     position: absolute;
     margin: 0;
     padding: 0;
@@ -1517,7 +1518,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .header-logo a {
-    display: block;
+    display:none;
     margin: 9px 0 0 0;
     padding: 0;
     outline: 0;
@@ -1650,7 +1651,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-nav li a {
     display: block;
-    line-height: 72px;
     color: #FFFFFF;
 }
 

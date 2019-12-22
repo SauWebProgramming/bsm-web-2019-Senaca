@@ -11,7 +11,7 @@
     <title>BASC Blog</title>
     <meta name="description" content="">
     <meta name="author" content="">
-   
+
     @Scripts.Render("~/bundles/modernizr")
 
 
@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="~/Content/css/base.css">
     <link rel="stylesheet" href="~/Content/css/vendor.css">
     <link rel="stylesheet" href="~/Content/css/main.css">
+    <link rel="stylesheet" href="~/Content/css/iconic/css/iconmonstr-iconic-font.css" />
+    <link rel="stylesheet" href="~/Content/css/iconic/css/iconmonstr-iconic-font.min.css" />
+
 
 
 
@@ -36,12 +39,16 @@
     ================================================== -->
     <header class="s-header">
 
-        <nav class="header-nav-wrap">
+        <nav class="header-nav-wrap" style="padding-bottom:10px;">
             <ul class="header-nav">
-                <li class="current"><a class="smoothscroll" href="/Home/Index" title="home">Home</a></li>
-                <li><a class="smoothscroll" href="/Home/Blog" title="blog">Blog</a></li>
-                <li><a class="smoothscroll" href="/Home/Contact" title="contact">Contact</a></li>
+                <li class="current">  @Html.ActionLink("Home", "Index", "Home", new { name = "homelink" })</li>
+                <li><  @Html.ActionLink("Blog", "Blog", "Home", new { name = "blink" })</li>
+                <li>
+                    @Html.ActionLink("Contact", "Contact", "Home", new { name = "clink" })
+                </li>
+                @Html.Partial("_LoginPartial")
             </ul>
+          
         </nav>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>

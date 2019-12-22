@@ -244,3 +244,7 @@ C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\obj\Debug\BlogBASC.csp
 C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\obj\Debug\BlogBASC.csproj.CopyComplete
 C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\obj\Debug\BlogBASC.dll
 C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\obj\Debug\BlogBASC.pdb
+C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\bin\Microsoft.IdentityModel.Tokens.xml

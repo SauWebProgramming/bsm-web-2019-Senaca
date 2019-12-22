@@ -13,6 +13,8 @@ namespace BlogBASC.Controllers
     public class BlogController : Controller
     {
         private BlogContext db = new BlogContext();
+
+       [Authorize]
         public ActionResult List(int? id, string q)
         {
             var bloglar = db.Bloglar
@@ -44,6 +46,8 @@ namespace BlogBASC.Controllers
             return View(bloglar.ToList());
         }
         // GET: Blog
+
+       [Authorize(Roles="Admin")]
         public ActionResult Index()
         {
             var bloglar = db.Bloglar.Include(b => b.Category);
@@ -51,6 +55,7 @@ namespace BlogBASC.Controllers
         }
 
         // GET: Blog/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -66,6 +71,7 @@ namespace BlogBASC.Controllers
         }
 
         // GET: Blog/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             ViewBag.CategoryId = new SelectList(db.Kategoriler, "Id", "KategoriAdi");
@@ -77,6 +83,7 @@ namespace BlogBASC.Controllers
         // daha fazla bilgi için https://go.microsoft.com/fwlink/?LinkId=317598 sayfasına bakın.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create([Bind(Include = "Baslik,Aciklama,Resim,Icerik,CategoryId")] Blog blog)
         {
             if (ModelState.IsValid)
@@ -92,6 +99,7 @@ namespace BlogBASC.Controllers
         }
 
         // GET: Blog/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -112,6 +120,7 @@ namespace BlogBASC.Controllers
         // daha fazla bilgi için https://go.microsoft.com/fwlink/?LinkId=317598 sayfasına bakın.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "Id,Baslik,Aciklama,Resim,Icerik,Onay,Anasayfa,CategoryId")] Blog blog)
         {
             if (ModelState.IsValid)
@@ -139,6 +148,7 @@ namespace BlogBASC.Controllers
         }
 
         // GET: Blog/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -154,6 +164,7 @@ namespace BlogBASC.Controllers
         }
 
         // POST: Blog/Delete/5
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
