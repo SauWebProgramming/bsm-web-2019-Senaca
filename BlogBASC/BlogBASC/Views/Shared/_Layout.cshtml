@@ -41,11 +41,13 @@
 
         <nav class="header-nav-wrap" style="padding-bottom:10px;">
             <ul class="header-nav">
-                <li class="current">  @Html.ActionLink("Home", "Index", "Home", new { name = "homelink" })</li>
+                <li class="current">  @Html.ActionLink(BlogBASC.Resources.HomeTexts.Home , "Index", "Home", new { name = "homelink" })</li>
                 <li><  @Html.ActionLink("Blog", "Blog", "Home", new { name = "blink" })</li>
                 <li>
-                    @Html.ActionLink("Contact", "Contact", "Home", new { name = "clink" })
+                    @Html.ActionLink(BlogBASC.Resources.HomeTexts.Contact, "Contact", "Home", new { name = "clink" })
                 </li>
+                <li>@Html.ActionLink(BlogBASC.Resources.HomeTexts.Language, "Index","Language")</li>
+
                 @Html.Partial("_LoginPartial")
             </ul>
           

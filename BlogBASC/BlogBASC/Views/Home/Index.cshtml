@@ -27,12 +27,10 @@
             </h1>
 
             <div class="home-content__buttons">
-                <a id="registerLink" href="/Account/Login" class="btn btn--stroke">
-                    SIGN IN
-                </a>
-                <a id="loginLink" href="/Account/Register" class="btn btn--stroke">
-                    REGISTER
-                </a>
+                @Html.ActionLink(BlogBASC.Resources.HomeTexts.Signin, "Login", "Account", null, new { id = "registerLink", @class = "btn btn--stroke" })
+
+                @Html.ActionLink(BlogBASC.Resources.HomeTexts.Register, "Register", "Account", null, new { id = "registerLink", @class = "btn btn--stroke" })
+                
 
             </div>
 

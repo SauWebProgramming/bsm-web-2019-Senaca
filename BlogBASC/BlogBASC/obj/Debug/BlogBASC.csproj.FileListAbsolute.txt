@@ -248,3 +248,8 @@ C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\bin\Microsoft.Identity
 C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\bin\Microsoft.IdentityModel.Tokens.dll
 C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\bin\Microsoft.IdentityModel.Logging.xml
 C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\bin\tr\BlogBASC.resources.dll
+C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\obj\Debug\BlogBASC.Resources.HomeTexts.resources
+C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\obj\Debug\BlogBASC.Resources.HomeTexts.tr.resources
+C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\obj\Debug\BlogBASC.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\bsm-web-2019-Senaca\BlogBASC\BlogBASC\obj\Debug\tr\BlogBASC.resources.dll
