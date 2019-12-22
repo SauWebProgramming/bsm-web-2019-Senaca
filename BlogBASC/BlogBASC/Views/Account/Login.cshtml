@@ -2,11 +2,13 @@
 @model LoginViewModel
 @{
     ViewBag.Title = "Oturum aç";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+
 }
 
 <h2>@ViewBag.Title.</h2>
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-10">
         <section id="loginForm">
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
@@ -38,7 +40,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Oturum aç" class="btn btn-default" />
+                        <input type="submit" value="Oturum aç" class="btn btn-primary btnclr"  />
                     </div>
                 </div>
                 <p>
@@ -51,11 +53,7 @@
             }
         </section>
     </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
+    
 </div>
 
 @section Scripts {

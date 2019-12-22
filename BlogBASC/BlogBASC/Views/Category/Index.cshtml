@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout1.cshtml";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <h2>Kategoriler</h2>
@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("Yeni Kategori Oluştur", "Create",null,new { @class="btn btn-primary" })
 </p>
-<table class="table table-bordered table-hover table-striped">
+<table class="table table-bordered table-hover table-striped wcolor">
     <tr>
         <th style="width:37%">
             @Html.DisplayNameFor(model => model.KategoriAdi)
@@ -30,7 +30,7 @@
             @Html.DisplayFor(modelItem => item.BlogSayisi)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-secondary btn-xs" })
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-secondary btn-xs " })
             @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-xs" })
         </td>
     </tr>
